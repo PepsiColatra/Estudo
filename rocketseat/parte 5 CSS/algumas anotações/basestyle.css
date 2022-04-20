@@ -1,0 +1,67 @@
+/* comentarios no css */ 
+
+/* Anatomia css 
+Tamanho (largura x altura width e height, respectivamente
+Conteúdo: o content
+Bordas: o border
+Preenchimento interno: o padding
+Espaços fora da caixa: a margin
+*/
+/* ### Especificidade
+ É um cálculo matemático, onde, cada tipo de seletor e origem do estilo, possuem
+valores a serem considerados.
+0. Universal selector, combinators e negation pseudo-class (:not())
+1. Element type selector e pseudo-elements (::before, ::after)
+10. Classes e attribute selectors ([type="radio"])
+100. ID selector
+1000. Inline */
+
+/* ID selector usando # */
+#container {
+	width: 250px;
+}
+
+/* Class selector usando . */
+.m-40 {
+	margin: 40px;
+}
+
+/* Element/Type selector + Agrupamento de seletores */
+h1, h2 {
+    color: blue;
+	font-size: 60px;
+	background: gray;
+}
+
+/* Selectors
+Formas de conectar um elemento HTML com o CSS
+
+    * Global selector '*'
+    * Element/type selector 'h1, h2, p, div'
+    * ID Selector '#box, #container
+    *Class Selector '.red, .m-4'
+    * Attribute selector, Pseudo-class, Pseudo-eçement, e outros
+
+
+
+    {
+    /* background properties */
+* {
+    background-color: rgb(10, 0, 84);
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    /* background shorthand*/
+    background: rgb(5, 1, 86) url(images/bg.gif) no-repeat left top;
+
+    /* font properties */
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+
+    /* font shorthand */ 
+    font: bold italic .8em/1.2 Arial, sans-serif;
+}
