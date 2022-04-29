@@ -4,8 +4,7 @@
     color: rgb(255, 255, 255);
 }
 
-#navegacao {
-   
+#navegacao {   
     /* definição da cor de fundo */
     background: rgba(255, 255, 255, 0.1);
     /* aplicação de filtro */
@@ -15,11 +14,21 @@
     box-shadow: 2px 2px rgba(255, 255, 255, 0.2);
     /* criação de uma borda para a box */
     border-radius: 10px;
-    
-    
-    box-sizing: border-box;
-
+    box-sizing: border-box;    
     /* tamanho da caixa  */
     width: 500px;
     height: 50px;  
+}
+
+h1 {
+    /* aplica cor as letras */
+    color: aqua;
+    /* aplica cor a caixa */
+    background-color: rgb(200, 90, 197);
+    /*aplica cor a borda */
+    border-color: rgb(32, 5, 141);
+    /* cria a borda */
+    border: dashed 10px;
+    margin: 10px;
+    
 }

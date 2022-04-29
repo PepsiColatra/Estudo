@@ -65,3 +65,11 @@ Essa caixa possui propriedades de uma caixa (2D)
 - Espaços fora da caixa         margin
 
 *Cada elemento na sua página, será considerado uma caixa.
+
+# Cores
+# Tipos
+* background-color (para caixas)
+* color (para textos)
+* border-color (para caixas)
+* outros
+https://convertacolor.com/

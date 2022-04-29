@@ -1,0 +1,35 @@
+* {margin: 0 ;}
+
+/*header {
+    height: 100px;
+    border: 7px dashed red;
+    background-color: rgb(55, 100, 50);
+    background-image: url(http://s2.glbimg.com/kmbgBzKPL0URISIQenPiAKo4ORI=/e.glbimg.com/og/ed/f/original/2017/08/23/5c147f01-dff6-4952-98a0-9394c88361c2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    background-clip: content-box;
+}
+*/
+
+main {
+    color: white;
+    /* cor do background */
+    background-color: rgb(55, 100, 50);
+    /* seleciona imagem para o backgrund */
+    background-image: url(http://s2.glbimg.com/kmbgBzKPL0URISIQenPiAKo4ORI=/e.glbimg.com/og/ed/f/original/2017/08/23/5c147f01-dff6-4952-98a0-9394c88361c2.jpg);
+    /* define se a imagem vai repetir ou não */
+    background-repeat: no-repeat;
+    /* posição da imagem */
+    background-position: center;
+    /* tamanho da imagem no background */
+    background-size: contain;
+    background-origin: border-box;
+    background-clip: content-box;
+    /* define como o background vai se comportar ao rolar a tela */
+    background-attachment: fixed;
+    /* gradiente de cor para cor */
+    background: linear-gradient(90deg, blue, rgb(55, 100, 50));
+}
+
