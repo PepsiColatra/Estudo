@@ -165,3 +165,10 @@ código
     * camelCase
     * snake_case
     * Escrever em inglês
+
+# Declaração de variavel
+// declaração de uma variavel chamada name
+var name
+// declaração do valor da variavel chamada name
+name = "Pepsi"
+var name = "Pepsi"
