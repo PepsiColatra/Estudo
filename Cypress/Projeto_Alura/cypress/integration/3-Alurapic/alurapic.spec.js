@@ -39,14 +39,14 @@ describe('Login e registro de usuarios alurapic', () => {
         
     })
 
-     it('saber se o username ja foi usado', () => {
-         cy.contains('a', 'Register now').click();
-         cy.contains('button', 'Register').click();
-         cy.get('input[formcontrolname="userName"]', ).type('pepsi');
-         cy.contains('button', 'Register').click();
-         cy.contains('ap-vmessage', 'Username already taken').should('be.visible');
+      it('saber se o username ja foi usado', () => {
+          cy.contains('a', 'Register now').click();
+          cy.contains('button', 'Register').click();
+          cy.get('input[formcontrolname="userName"]', ).type('pepsi');
+          cy.contains('button', 'Register').click();
+          cy.contains('ap-vmessage', 'Username already taken').should('be.visible');
         
-     })
+      })
 
      it('verifica mensagens de senha com menos de 8 caracteres', () => {
          cy.contains('a', 'Register now').click();
@@ -56,5 +56,22 @@ describe('Login e registro de usuarios alurapic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
                 
      })
+
+     it('fazer login de usuario valido', () => {
+        cy.get('input[formcontrolname="userName"]').type('pepsi');
+        cy.get('input[formcontrolname="password"]').type('12345678');
+        cy.get('button[type="submit"]').click();
+        cy.contains('a', '(Logout)').should('be.visible');
+     })
+
+    it('fazer login de usuario invalido', () => {
+        cy.get('input[formcontrolname="userName"]').type('luna');
+        cy.get('input[formcontrolname="password"]').type('1234');
+        cy.get('button[type="submit"]').click();
+        cy.on ('window:alert', (str) => {
+            expect(str).to.equal('Invalid user name or password')
+        })
+    })
+    
 
 })

@@ -1,0 +1,6 @@
+======no terminal======
+npx cypress open (para abrir o cypress)
+
+npx cypress run (roda os testes sem precisar abrir o cypress)
+
+npx cypress run --reporter mochawesome (mesmo teste mas diferenciado)
