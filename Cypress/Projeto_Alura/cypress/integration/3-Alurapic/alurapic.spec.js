@@ -58,20 +58,31 @@ describe('Login e registro de usuarios alurapic', () => {
      })
 
      it('fazer login de usuario valido', () => {
-        cy.get('input[formcontrolname="userName"]').type('pepsi');
-        cy.get('input[formcontrolname="password"]').type('12345678');
-        cy.get('button[type="submit"]').click();
+        cy.login('pepsi', '12345678')
         cy.contains('a', '(Logout)').should('be.visible');
      })
 
     it('fazer login de usuario invalido', () => {
-        cy.get('input[formcontrolname="userName"]').type('luna');
-        cy.get('input[formcontrolname="password"]').type('1234');
-        cy.get('button[type="submit"]').click();
+        cy.login('pepsis', '12345678')
         cy.on ('window:alert', (str) => {
             expect(str).to.equal('Invalid user name or password')
         })
     })
     
+    const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario => {
+        
+        it.only(`registra novo usuário ${usuario.userName} `, () => {
+            cy.contains('a', 'Register now').click();
+            cy.contains('button', 'Register').click();
+            cy.get('input[formcontrolname="email"]').type(usuario.email);
+            cy.get('input[formcontrolname="fullName"]').type(usuario.fullName);
+            cy.get('input[formcontrolname="userName"]').type(usuario.userName);
+            cy.get('input[formcontrolname="password"]').type(usuario.password);
+            cy.contains('button', 'Register').click();
+        })
+    })
+
+
 
 })
