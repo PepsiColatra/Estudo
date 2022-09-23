@@ -58,7 +58,7 @@ describe('Login e registro de usuarios alurapic', () => {
      })
 
      it('fazer login de usuario valido', () => {
-        cy.login('pepsi', '12345678')
+        cy.login(Cypress.env('userName'), Cypress.env('password'), )
         cy.contains('a', '(Logout)').should('be.visible');
      })
 
